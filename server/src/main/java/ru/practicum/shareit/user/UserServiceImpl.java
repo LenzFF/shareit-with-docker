@@ -60,7 +60,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delete(long id) {
-        getUserOrThrowException(id);
         userStorage.deleteById(id);
     }
 

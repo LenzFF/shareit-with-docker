@@ -7,6 +7,7 @@ import ru.practicum.shareit.user.dto.UserDto;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Getter
 @Setter
@@ -17,9 +18,11 @@ public class ItemDto {
     private UserDto owner;
 
     @NotBlank
+    @Size(max = 100)
     private String name;
 
     @NotBlank
+    @Size(max = 1000)
     private String description;
 
     @NotNull

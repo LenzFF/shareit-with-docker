@@ -11,12 +11,15 @@ import javax.validation.constraints.Pattern;
 @Getter
 @Setter
 public class UserDto {
+
     @NotNull
-    private int id; //id пользователя
+    private int id;
+
     @Email
     @Pattern(regexp = ".+@.+\\..+")
     @NotNull
-    private String email; //email
+    private String email;
+
     @NotBlank
-    private String name; //имя пользователя
+    private String name;
 }

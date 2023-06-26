@@ -28,14 +28,6 @@ public class ErrorHandler {
         return new ErrorResponse(e.getMessage());
     }
 
-
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ErrorResponse methodArgumentNotValidException(final MethodArgumentNotValidException e) {
-        log.info("400 {}", e.getMessage());
-        return new ErrorResponse(e.getMessage());
-    }
-
     @ExceptionHandler(ConstraintViolationException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorResponse constraintViolationException(final ConstraintViolationException e) {
